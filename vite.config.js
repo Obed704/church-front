@@ -1,13 +1,20 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/", // ensures correct paths to JS/CSS files
-  build: {
-    outDir: "dist", // Vercel expects the build output in a folder
-  },
   optimizeDeps: {
-    exclude: ["lucide-react"],
+    exclude: ["lucide-react"], // keep if you have lucide-react issues
+  },
+  base: "/", // root path, fine for vercel root domain
+  build: {
+    outDir: "dist",       // default build folder
+    emptyOutDir: true,    // clean old files
+    sourcemap: true,      // optional, helpful for debugging
+  },
+  server: {
+    port: 5173,
+    open: true,
   },
 });
