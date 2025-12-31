@@ -16,7 +16,7 @@ const Welcome = () => {
         className="absolute w-full h-full object-cover"
       >
         <source
-          src={`${BASE_URL}/largeVideo/1756800250256-878408921.mp4`}
+          src={`https://church-back-dm84.onrender.com/largeVideo/1767144504858-703349876.mp4`}
           type="video/mp4"
         />
         Your browser does not support HTML5 video.
